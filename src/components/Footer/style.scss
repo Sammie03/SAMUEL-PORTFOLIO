@@ -1,0 +1,19 @@
+@mixin flexbox ($direction,$justify,$alignment) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $alignment;
+}
+
+.footer-container{
+    @include flexbox(column,center,center);
+    margin-top: 90px;
+
+    .footer-love{
+        color: rgb(72, 194, 155);
+    }
+
+    .copyright-year{
+        margin: 0px;
+    }
+}

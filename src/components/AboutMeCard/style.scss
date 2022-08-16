@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Lobster+Two&display=swap');
+
+@mixin flexbox ($direction, $justify, $alignment) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $alignment;
+}
+
+.aboutme-card-container{
+    @include flexbox(column,center,center);
+    width: 100%;
+    margin-top: 20px;
+
+    .aboutme-card{
+        width: 53%;
+
+        .card-top{
+            height: 20px;
+            background-color: grey;
+            border-radius: 5px 5px 0 0;
+            margin-top: 50px;
+
+            .top-circle{
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                display: inline-block;
+                margin: 5px;
+            }
+
+            .red-circle{
+                background-color: red;
+            }
+
+            .yellow-circle{
+                background-color: yellow;
+            }
+
+            .green-circle{
+                background-color: green;
+            }
+        }
+
+        .card-body{
+            background-color: rgb(38, 38, 38);
+            min-height: 400px;
+            border-radius: 0 0 5px 5px;
+            padding: 50px;
+            color: white;
+            font-family: 'Kalam', 'cursive';
+            line-height: 80px;
+            font-weight: 600;
+            font-size: 36px;
+        }
+
+        .green-text{
+            color: greenyellow;
+        }
+
+        .blue-text{
+            color: rgb(18, 153, 207);
+        }
+
+        .right-list{
+            margin-left: 300px;
+        }
+
+        .aboutMe-text{
+            ul li{
+                list-style-type: none;
+            }
+        }
+    }
+}

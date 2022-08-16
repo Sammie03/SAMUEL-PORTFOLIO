@@ -1,0 +1,38 @@
+@mixin flexbox ($direction, $justify, $alignment) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $alignment;
+}
+
+.navbar-container{
+    @include flexbox(row,center,center);
+    display: flex;
+
+    .navbar .nav-items{
+        list-style-type: none;
+        display: inline-block;
+        padding: 10px 70px;
+        cursor: pointer;
+
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .moon-icon{
+        cursor: pointer;
+    }
+    }
+
+    .nav-items2:hover{
+        background-image: linear-gradient(to right, rgb(148, 212, 192),rgb(62, 135, 113));
+        background-clip: text;
+        color: transparent;
+        border-bottom: 2px double rgb(75, 102, 94); 
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+
+   
+}

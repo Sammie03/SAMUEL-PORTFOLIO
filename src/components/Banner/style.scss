@@ -1,0 +1,94 @@
+@mixin flexbox ($direction, $justify, $alignment) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $alignment;
+}
+
+.banner-container{
+    @include flexbox(row,center,center);
+    margin-top: 80px;
+
+    .banner-wrapper{
+        @include flexbox(row,center,center);
+        padding: 50px;
+
+        @media screen and (max-width: 768px) {
+            @include flexbox(column,'','')
+          }
+
+        .banner-img{
+            @include flexbox(row,center,center);
+            background-color: rgb(73, 173, 140);
+            border-radius: 50%;
+            width: 350px;
+            height: 350px;
+            margin: 0px 40px;
+            border: 3px double rgb(9, 65, 47); 
+        }
+    
+        .banner-writeup{
+            @include flexbox(column,'',flex-start);
+            width:400px;
+            height: 350px;
+
+            @media screen and (max-width: 768px) {
+                @include flexbox('',center,'')
+              }
+
+
+              a{
+                text-decoration: none;
+                color: inherit;
+            }
+
+            .writeup{
+                margin: 10px;
+            }
+
+            .writeup:hover{
+                padding-top: 2px;
+                background-image: linear-gradient(to right, rgb(159, 245, 218),rgb(111, 205, 175), rgb(61, 186, 146),  rgb(62, 135, 113));
+                background-clip: text;
+                color: transparent;
+                transition-duration: 0.2s;
+                cursor: pointer;
+            }
+
+            .social-media{
+                margin-top: 20px;
+
+                img{
+                    padding: 20px;
+                }
+            }
+
+            .myname{
+                background-image: linear-gradient(to right, rgb(49, 155, 121), rgb(23, 77, 60), rgb(27, 114, 87),  rgb(35, 103, 82));
+                background-clip: text;
+                color: transparent;
+            }
+
+            .wave{
+                animation-name: wave-animation; 
+                animation-duration: 2.5s;     
+                animation-iteration-count: infinite;  
+                transform-origin: 70% 70%;     
+                display: inline-block;
+              }
+              
+              @keyframes wave-animation {
+                  0% { transform: rotate( 0.0deg) }
+                 10% { transform: rotate(14.0deg) }  
+                 20% { transform: rotate(-8.0deg) }
+                 30% { transform: rotate(14.0deg) }
+                 40% { transform: rotate(-4.0deg) }
+                 50% { transform: rotate(10.0deg) }
+                 60% { transform: rotate( 0.0deg) } 
+                100% { transform: rotate( 0.0deg) }
+              }
+        }
+
+    }  
+
+}
