@@ -13,7 +13,11 @@
     margin-top: 20px;
 
     .aboutme-card{
-        width: 53%;
+        width: 80%;
+
+        @media screen and (max-width: 768px) {
+            width: 96%;
+        }
 
         .card-top{
             height: 20px;
@@ -52,6 +56,13 @@
             line-height: 80px;
             font-weight: 600;
             font-size: 36px;
+
+            @media screen and (max-width: 768px) {
+            padding: 25px;
+            line-height: 40px;
+            font-weight: 500;
+            font-size: 24px;
+            }
         }
 
         .green-text{

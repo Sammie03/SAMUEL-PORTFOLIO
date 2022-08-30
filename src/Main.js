@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import HomePage from './modules/Homepage'
 import AboutMe from './modules/AboutMe'
+import Portfolio from './modules/Portfolio'
 import NavBar from './components/NavBar'
 import Footer from './components/Footer'
 
@@ -15,11 +16,11 @@ export default class Main extends Component {
         <Routes>
             <Route exact path= "/" element={<HomePage/>}/>
             <Route exact path= "/aboutme" element={<AboutMe/>}/>
-            <Route exact path= "/portfolio" element={<AboutMe/>}/>
+            <Route exact path= "/portfolio" element={<Portfolio/>}/>
             <Route exact path= "/" element={<HomePage/>}/>
         </Routes>
-        <Footer/>
         </div>
+        <Footer/>
       </Router>
     )
   }

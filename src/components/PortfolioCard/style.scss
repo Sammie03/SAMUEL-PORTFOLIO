@@ -1,0 +1,41 @@
+@mixin flexbox ($direction, $justify, $alignment) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $alignment;
+}
+
+.portfolio-container{
+    @include flexbox(column,center,center);
+    padding: 30px;
+
+    .portfolio-parent{
+        @include flexbox(row,flex-start,center); 
+    }
+
+    .linkBTN{
+        border-color: grey;
+        margin: 5px;
+    }
+
+    .project-images{
+        width: 550px;
+        height: 300px;
+
+        @media screen and (max-width: 768px) {
+            width: 350px;
+            height: 200px;
+        }
+    }
+
+    .portfolio-items{
+        @include flexbox(column,flex-start,center);
+        margin-top: 30px;
+    }
+
+    .projectTitle{
+        background-image: linear-gradient(to right, rgb(49, 155, 121), rgb(23, 77, 60), rgb(27, 114, 87),  rgb(35, 103, 82));
+        background-clip: text;
+        color: transparent;
+    }
+}

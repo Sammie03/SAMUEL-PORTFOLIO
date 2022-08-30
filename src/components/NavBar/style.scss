@@ -6,14 +6,32 @@
 }
 
 .navbar-container{
-    @include flexbox(row,center,center);
+    @include flexbox(row,center,flex-start);
     display: flex;
 
+    @media screen and (max-width: 768px) {
+        @include flexbox(row,space-between,space-between);
+      }
+
+      .nav-logo{
+        @media screen and (max-width: 768px) {
+            display: none !important;
+          }
+    }
+
+    .navbar-toggler{
+        background-color: white!important;
+    }
+    
     .navbar .nav-items{
         list-style-type: none;
         display: inline-block;
         padding: 10px 70px;
         cursor: pointer;
+
+        @media screen and (max-width: 768px) {
+            padding: 10px 0px;
+          }
 
     a{
         text-decoration: none;

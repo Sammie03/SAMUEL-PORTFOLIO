@@ -6,8 +6,16 @@
 }
 
 .footer-container{
-    @include flexbox(column,center,center);
-    margin-top: 90px;
+    @include flexbox(row,center,center);
+    margin-top: 220px;
+
+    @media screen and (max-width: 768px){
+        margin-top: 120px;
+    };
+
+    p{
+        font-size: 13px;
+    }
 
     .footer-love{
         color: rgb(72, 194, 155);

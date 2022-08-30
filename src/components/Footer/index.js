@@ -6,7 +6,6 @@ export default class Footer extends Component {
     return (
       <div className='footer-container'>
         <p className="footer-writeup">Made with <span className='footer-love'>♥</span> by <i>Samuel Okediya</i></p>
-        <p className="copyright-year">© 2022</p>
       </div>
     )
   }

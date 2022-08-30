@@ -7,15 +7,13 @@
 
 .banner-container{
     @include flexbox(row,center,center);
-    margin-top: 80px;
+    margin-top: 120px;
+    min-height: max-content;
 
-    .banner-wrapper{
-        @include flexbox(row,center,center);
-        padding: 50px;
-
-        @media screen and (max-width: 768px) {
-            @include flexbox(column,'','')
-          }
+    @media screen and (max-width: 768px) {
+        @include flexbox(column,center,center);
+        margin-top: 0px;
+      }
 
         .banner-img{
             @include flexbox(row,center,center);
@@ -25,6 +23,18 @@
             height: 350px;
             margin: 0px 40px;
             border: 3px double rgb(9, 65, 47); 
+
+            @media screen and (max-width: 768px) {
+                width: 250px;
+                height: 250px;
+              }
+
+              .banner-img-inner{
+                @media screen and (max-width: 768px) {
+                    width: 150px;
+                    height: 150px;
+                  }
+              }
         }
     
         .banner-writeup{
@@ -33,7 +43,8 @@
             height: 350px;
 
             @media screen and (max-width: 768px) {
-                @include flexbox('',center,'')
+                @include flexbox(column,center,center);
+                margin-top: 15px;
               }
 
 
@@ -42,8 +53,13 @@
                 color: inherit;
             }
 
+
             .writeup{
                 margin: 10px;
+            }
+
+            .h1, h1{
+                font-size:xx-large;
             }
 
             .writeup:hover{
@@ -55,11 +71,15 @@
                 cursor: pointer;
             }
 
-            .social-media{
+            .social-media-icons{
                 margin-top: 20px;
-
-                img{
-                    padding: 20px;
+                background: rgb(255, 255, 255)!important;
+                background-clip: text;
+                color: transparent;
+                border-radius: 10px;
+                
+                .iconsAlign{
+                    padding: 0px 20px;
                 }
             }
 
@@ -91,4 +111,3 @@
 
     }  
 
-}
