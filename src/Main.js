@@ -12,15 +12,15 @@ export default class Main extends Component {
     return (
       <Router>
         <div>
-       <NavBar/>
-        <Routes>
-            <Route exact path= "/" element={<HomePage/>}/>
-            <Route exact path= "/aboutme" element={<AboutMe/>}/>
-            <Route exact path= "/portfolio" element={<Portfolio/>}/>
-            <Route exact path= "/" element={<HomePage/>}/>
-        </Routes>
+          <NavBar />
+          <Routes>
+            <Route exact path="/" element={<HomePage />} />
+            <Route exact path="/aboutme" element={<AboutMe />} />
+            <Route exact path="/portfolio" element={<Portfolio />} />
+            <Route exact path="/" element={<HomePage />} />
+          </Routes>
         </div>
-        <Footer/>
+        <Footer />
       </Router>
     )
   }

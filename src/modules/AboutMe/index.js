@@ -5,7 +5,7 @@ export default class AboutMe extends Component {
   render() {
     return (
       <div>
-        <AboutMeCard/>
+        <AboutMeCard />
       </div>
     )
   }

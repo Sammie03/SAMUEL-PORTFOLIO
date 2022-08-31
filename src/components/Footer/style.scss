@@ -1,27 +1,29 @@
-@mixin flexbox ($direction,$justify,$alignment) {
+@mixin flexbox ($direction, $justify, $alignment) {
     display: flex;
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $alignment;
 }
 
-.footer-container{
-    @include flexbox(row,center,center);
+.footer-container {
+    @include flexbox(row, center, center);
     margin-top: 220px;
 
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 768px) {
         margin-top: 120px;
-    };
+    }
 
-    p{
+    ;
+
+    p {
         font-size: 13px;
     }
 
-    .footer-love{
+    .footer-love {
         color: rgb(72, 194, 155);
     }
 
-    .copyright-year{
+    .copyright-year {
         margin: 0px;
     }
 }

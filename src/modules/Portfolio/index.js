@@ -5,7 +5,7 @@ export default class Portfolio extends Component {
   render() {
     return (
       <div>
-        <PortfolioCard/>
+        <PortfolioCard />
       </div>
     )
   }

@@ -7,25 +7,25 @@
     align-items: $alignment;
 }
 
-.aboutme-card-container{
-    @include flexbox(column,center,center);
+.aboutme-card-container {
+    @include flexbox(column, center, center);
     width: 100%;
-    margin-top: 20px;
+    margin-top: 5px;
 
-    .aboutme-card{
+    .aboutme-card {
         width: 80%;
 
         @media screen and (max-width: 768px) {
             width: 96%;
         }
 
-        .card-top{
+        .card-top {
             height: 20px;
             background-color: grey;
             border-radius: 5px 5px 0 0;
             margin-top: 50px;
 
-            .top-circle{
+            .top-circle {
                 width: 12px;
                 height: 12px;
                 border-radius: 50%;
@@ -33,20 +33,20 @@
                 margin: 5px;
             }
 
-            .red-circle{
+            .red-circle {
                 background-color: red;
             }
 
-            .yellow-circle{
+            .yellow-circle {
                 background-color: yellow;
             }
 
-            .green-circle{
+            .green-circle {
                 background-color: green;
             }
         }
 
-        .card-body{
+        .card-body {
             background-color: rgb(38, 38, 38);
             min-height: 400px;
             border-radius: 0 0 5px 5px;
@@ -58,27 +58,27 @@
             font-size: 36px;
 
             @media screen and (max-width: 768px) {
-            padding: 25px;
-            line-height: 40px;
-            font-weight: 500;
-            font-size: 24px;
+                padding: 25px;
+                line-height: 40px;
+                font-weight: 500;
+                font-size: 24px;
             }
         }
 
-        .green-text{
+        .green-text {
             color: greenyellow;
         }
 
-        .blue-text{
+        .blue-text {
             color: rgb(18, 153, 207);
         }
 
-        .right-list{
+        .right-list {
             margin-left: 300px;
         }
 
-        .aboutMe-text{
-            ul li{
+        .aboutMe-text {
+            ul li {
                 list-style-type: none;
             }
         }

@@ -25,6 +25,35 @@ export default class NavBar extends Component {
     render() {
         let darkLogo = <img src="assets/images/letter-s (2).png" alt="logo" width={40} height={40} className='logo' />
         let lightLogo = <img src="assets/images/letter-s (9).png" alt="logo" width={40} height={40} className='logo' />
+
+        let darkTexts =
+            <Nav
+                className="me-auto my-2 my-lg-0"
+            >
+                <li className="nav-items nav-items2 navitem-dark-texts"><a href="/">home</a></li>
+                <li className="nav-items nav-items2 navitem-dark-texts"><a href="/aboutme">about me</a></li>
+
+                <li className="nav-items nav-items2 navitem-dark-texts"><a href="/portfolio">portfolio</a></li>
+                <li className="nav-items navitem-dark-texts">
+                    <span className='moon-icon' onClick={this.changeMode}>
+                        {this.state.darkMode ? <span className='mode-text'>light mode <img src="assets/images/sun.png" alt="sun" width={25} height={25} /></span> : <span className='mode-text'>dark mode <img src="assets/images/half-moon.png" alt="moon" width={25} height={25} /></span>}
+                    </span>
+                </li>
+            </Nav>
+
+        let lightTexts = <Nav
+            className="me-auto my-2 my-lg-0"
+        >
+            <li className="nav-items nav-items2 navitem-light-texts"><a href="/">home</a></li>
+            <li className="nav-items nav-items2 navitem-light-texts"><a href="/aboutme">about me</a></li>
+
+            <li className="nav-items nav-items2 navitem-light-texts"><a href="/portfolio">portfolio</a></li>
+            <li className="nav-items navitem-light-texts">
+                <span className='moon-icon' onClick={this.changeMode}>
+                    {this.state.darkMode ? <span className='mode-text'>light mode <img src="assets/images/sun.png" alt="sun" width={25} height={25} /></span> : <span className='mode-text'>dark mode <img src="assets/images/half-moon.png" alt="moon" width={25} height={25} /></span>}
+                </span>
+            </li>
+        </Nav>
         return (
             <div className='navbar-container'>
                 <Navbar expand="lg">
@@ -33,21 +62,9 @@ export default class NavBar extends Component {
                             <li className="nav-items">
                                 {this.state.darkMode ? <span><a href="/">{lightLogo}</a></span> : <span><a href="/">{darkLogo}</a></span>}
                             </li></Navbar.Brand>
-                       <Navbar.Toggle aria-controls="navbarScroll"/>
+                        <Navbar.Toggle aria-controls="navbarScroll" />
                         <Navbar.Collapse id="navbarScroll">
-                            <Nav
-                                className="me-auto my-2 my-lg-0"
-                            >
-                                <li className="nav-items nav-items2"><a href="/">home</a></li>
-                                <li className="nav-items nav-items2"><a href="/aboutme">about me</a></li>
-
-                                <li className="nav-items nav-items2"><a href="/portfolio">portfolio</a></li>
-                                <li className="nav-items">
-                                    <span className='moon-icon' onClick={this.changeMode}>
-                                        {this.state.darkMode ? <img src="assets/images/sun.png" alt="sun" width={25} height={25} /> : <img src="assets/images/half-moon.png" alt="moon" width={25} height={25} />}
-                                    </span>
-                                </li>
-                            </Nav>
+                            {this.state.darkMode ? darkTexts : lightTexts}
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>

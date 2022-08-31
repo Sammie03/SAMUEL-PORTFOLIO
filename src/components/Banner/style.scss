@@ -5,109 +5,130 @@
     align-items: $alignment;
 }
 
-.banner-container{
-    @include flexbox(row,center,center);
+.banner-container {
+    @include flexbox(row, center, center);
     margin-top: 120px;
     min-height: max-content;
 
     @media screen and (max-width: 768px) {
-        @include flexbox(column,center,center);
+        @include flexbox(column, center, center);
         margin-top: 0px;
-      }
+    }
 
-        .banner-img{
-            @include flexbox(row,center,center);
-            background-color: rgb(73, 173, 140);
-            border-radius: 50%;
-            width: 350px;
-            height: 350px;
-            margin: 0px 40px;
-            border: 3px double rgb(9, 65, 47); 
+    .banner-img {
+        @include flexbox(row, center, center);
+        background-color: rgb(73, 173, 140);
+        border-radius: 50%;
+        width: 350px;
+        height: 350px;
+        margin: 0px 40px;
+        border: 3px double rgb(9, 65, 47);
 
-            @media screen and (max-width: 768px) {
-                width: 250px;
-                height: 250px;
-              }
-
-              .banner-img-inner{
-                @media screen and (max-width: 768px) {
-                    width: 150px;
-                    height: 150px;
-                  }
-              }
-        }
-    
-        .banner-writeup{
-            @include flexbox(column,'',flex-start);
-            width:400px;
-            height: 350px;
-
-            @media screen and (max-width: 768px) {
-                @include flexbox(column,center,center);
-                margin-top: 15px;
-              }
-
-
-              a{
-                text-decoration: none;
-                color: inherit;
-            }
-
-
-            .writeup{
-                margin: 10px;
-            }
-
-            .h1, h1{
-                font-size:xx-large;
-            }
-
-            .writeup:hover{
-                padding-top: 2px;
-                background-image: linear-gradient(to right, rgb(159, 245, 218),rgb(111, 205, 175), rgb(61, 186, 146),  rgb(62, 135, 113));
-                background-clip: text;
-                color: transparent;
-                transition-duration: 0.2s;
-                cursor: pointer;
-            }
-
-            .social-media-icons{
-                margin-top: 20px;
-                background: rgb(255, 255, 255)!important;
-                background-clip: text;
-                color: transparent;
-                border-radius: 10px;
-                
-                .iconsAlign{
-                    padding: 0px 20px;
-                }
-            }
-
-            .myname{
-                background-image: linear-gradient(to right, rgb(49, 155, 121), rgb(23, 77, 60), rgb(27, 114, 87),  rgb(35, 103, 82));
-                background-clip: text;
-                color: transparent;
-            }
-
-            .wave{
-                animation-name: wave-animation; 
-                animation-duration: 2.5s;     
-                animation-iteration-count: infinite;  
-                transform-origin: 70% 70%;     
-                display: inline-block;
-              }
-              
-              @keyframes wave-animation {
-                  0% { transform: rotate( 0.0deg) }
-                 10% { transform: rotate(14.0deg) }  
-                 20% { transform: rotate(-8.0deg) }
-                 30% { transform: rotate(14.0deg) }
-                 40% { transform: rotate(-4.0deg) }
-                 50% { transform: rotate(10.0deg) }
-                 60% { transform: rotate( 0.0deg) } 
-                100% { transform: rotate( 0.0deg) }
-              }
+        @media screen and (max-width: 768px) {
+            width: 250px;
+            height: 250px;
         }
 
-    }  
+        .banner-img-inner {
+            @media screen and (max-width: 768px) {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
 
+    .banner-writeup {
+        @include flexbox(column, '', flex-start);
+        width: 400px;
+        height: 350px;
+
+        @media screen and (max-width: 768px) {
+            @include flexbox(column, center, center);
+            margin-top: 15px;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        .writeup {
+            margin: 10px;
+        }
+
+        .h1,
+        h1 {
+            font-size: xx-large;
+        }
+
+        .writeup:hover {
+            padding-top: 2px;
+            background-image: linear-gradient(to right, rgb(159, 245, 218), rgb(42, 226, 168), rgb(61, 186, 146), rgb(11, 235, 168));
+            background-clip: text;
+            color: transparent;
+            transition-duration: 0.2s;
+            cursor: pointer;
+        }
+
+        .social-media-icons {
+            margin-top: 20px;
+            border-radius: 10px;
+
+            .iconsAlign {
+                padding: 0px 20px;
+                filter: opacity(0.5) drop-shadow(0 0 0 white);
+            }
+        }
+
+        .myname {
+            background-image: linear-gradient(to right, rgb(76, 219, 174), rgb(78, 213, 170), rgb(70, 247, 191), rgb(5, 199, 137));
+            background-clip: text;
+            color: transparent;
+        }
+
+        .wave {
+            animation-name: wave-animation;
+            animation-duration: 2.5s;
+            animation-iteration-count: infinite;
+            transform-origin: 70% 70%;
+            display: inline-block;
+        }
+
+        @keyframes wave-animation {
+            0% {
+                transform: rotate(0.0deg)
+            }
+
+            10% {
+                transform: rotate(14.0deg)
+            }
+
+            20% {
+                transform: rotate(-8.0deg)
+            }
+
+            30% {
+                transform: rotate(14.0deg)
+            }
+
+            40% {
+                transform: rotate(-4.0deg)
+            }
+
+            50% {
+                transform: rotate(10.0deg)
+            }
+
+            60% {
+                transform: rotate(0.0deg)
+            }
+
+            100% {
+                transform: rotate(0.0deg)
+            }
+        }
+    }
+
+}
