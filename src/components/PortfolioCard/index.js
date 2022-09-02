@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Button from 'react-bootstrap/Button';
 import './style.scss'
 
 
@@ -92,8 +91,8 @@ export default class PortfolioCard extends Component {
                                     <h5 className='projectTitle'>{project.projectName}</h5>
                                     <span className='projectTools'>{project.tools}</span>
                                     <div className="">
-                                        <a href={project.liveDemoLINK} className="btn linkBTN" target="_blank"><img src="assets/images/livedemo.png" alt="livedemo-icon" width={15} height={15} className='btnIcons' /> Live Demo</a>
-                                        <a href={project.sourceCodeLINK} className="btn linkBTN" target="_blank"><img src="assets/images/sourcecode.png" alt="sourcecode-icon" width={15} height={15} className='btnIcons' /> Source Code</a>
+                                        <a href={project.liveDemoLINK} className="btn linkBTN" target="_blank" rel="noreferrer"><img src="assets/images/livedemo.png" alt="livedemo-icon" width={15} height={15} className='btnIcons' /> Live Demo</a>
+                                        <a href={project.sourceCodeLINK} className="btn linkBTN" target="_blank" rel="noreferrer"><img src="assets/images/sourcecode.png" alt="sourcecode-icon" width={15} height={15} className='btnIcons' /> Source Code</a>
                                     </div>
 
                                 </div>

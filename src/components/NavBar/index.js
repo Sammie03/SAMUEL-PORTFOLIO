@@ -2,25 +2,51 @@ import React, { Component } from 'react'
 import './style.scss'
 import { Helmet } from 'react-helmet'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+
 
 export default class NavBar extends Component {
     state = {
-        darkMode: false
+        darkMode: JSON.parse(window.localStorage.getItem("mode"))
     }
-
+    
     changeMode = () => {
-        this.setState((prevState) => {
-            return {
-                darkMode: !prevState.darkMode
-            }
+        this.state.darkMode = !this.state.darkMode
+        window.localStorage.setItem("mode", this.state.darkMode)
+        this.setState({
+            darkMode: JSON.parse(window.localStorage.getItem("mode"))
         })
+
+   
     }
+    // changeMode = () => {
+    //     this.setState((prevState) => {
+    //         return {
+    //             darkMode: !prevState.darkMode
+    //         }
+    //     })
+        
+    // }
+
+    // componentDidMount(){ 
+    // this.setState({
+    //     darkMode: JSON.parse(window.localStorage.getItem("mode"))
+    // })
+    // }
+
+    // changeMode = () => {
+    // let darkMode = !this.state.darkMode;
+    // window.localStorage.setItem("mode", darkMode)
+
+
+    // let pageMode = JSON.parse(window.localStorage.getItem("mode"))
+    // this.setState({
+    //     darkMode:pageMode
+    // })
+
+
 
     render() {
         let darkLogo = <img src="assets/images/letter-s (2).png" alt="logo" width={40} height={40} className='logo' />
