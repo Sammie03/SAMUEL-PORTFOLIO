@@ -24,7 +24,7 @@ export default class NavBar extends Component {
 
     render() {
         let darkLogo = <img src="assets/images/letter-s (2).png" alt="logo" width={40} height={40} className='logo' />
-        let lightLogo = <img src="assets/images/letter-s (9).png" alt="logo" width={40} height={40} className='logo' />
+        let lightLogo = <img src="assets/images/letter-s (3).png" alt="logo" width={40} height={40} className='logo logo2' />
 
         let darkTexts =
             <Nav

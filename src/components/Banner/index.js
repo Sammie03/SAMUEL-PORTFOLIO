@@ -85,7 +85,7 @@ export default class Banner extends Component {
         return (
             <div className='banner-container'>
                 <div className="banner-img">
-                    <img src="assets/images/sammie.jpeg" alt="profile" width={335} height={335} className='banner-img-inner' />
+                    <img src="assets/images/sam06.png" alt="profile" width={335} height={335} className='banner-img-inner' />
                 </div>
                 <div className="banner-writeup">
                     <h1 className="writeup">Hi, I'm <span className='myname'>Samuel Okediya</span><span className="wave"><img src="assets/images/hand.png" alt="waving hand" width={30} height={30} /></span></h1>
