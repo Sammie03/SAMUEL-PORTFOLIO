@@ -11,7 +11,7 @@ export default class NavBar extends Component {
     state = {
         darkMode: JSON.parse(window.localStorage.getItem("mode"))
     }
-    
+
     changeMode = () => {
         this.state.darkMode = !this.state.darkMode
         window.localStorage.setItem("mode", this.state.darkMode)
@@ -19,34 +19,8 @@ export default class NavBar extends Component {
             darkMode: JSON.parse(window.localStorage.getItem("mode"))
         })
 
-   
+
     }
-    // changeMode = () => {
-    //     this.setState((prevState) => {
-    //         return {
-    //             darkMode: !prevState.darkMode
-    //         }
-    //     })
-        
-    // }
-
-    // componentDidMount(){ 
-    // this.setState({
-    //     darkMode: JSON.parse(window.localStorage.getItem("mode"))
-    // })
-    // }
-
-    // changeMode = () => {
-    // let darkMode = !this.state.darkMode;
-    // window.localStorage.setItem("mode", darkMode)
-
-
-    // let pageMode = JSON.parse(window.localStorage.getItem("mode"))
-    // this.setState({
-    //     darkMode:pageMode
-    // })
-
-
 
     render() {
         let darkLogo = <img src="assets/images/letter-s (2).png" alt="logo" width={40} height={40} className='logo' />
