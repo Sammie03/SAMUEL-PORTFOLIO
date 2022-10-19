@@ -24,6 +24,21 @@
         margin: 0px 40px;
         border: 3px double rgb(9, 65, 47);
 
+        @media (prefers-reduced-motion: no-preference) {
+            .banner-img-inner {
+              animation: Profile-img-spin infinite 30s linear;
+            }
+          }
+
+        @keyframes Profile-img-spin{
+            from {
+              transform: rotate(0deg);
+            }
+            to {
+              transform: rotate(360deg);
+            }
+          }
+
         @media screen and (max-width: 768px) {
             width: 250px;
             height: 250px;
