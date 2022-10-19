@@ -15,6 +15,21 @@
         margin-top: 0px;
     }
 
+    @media (prefers-reduced-motion: no-preference) {
+        .banner-img {
+          animation: Profile-img-spin infinite 240s linear;
+        }
+      }
+
+    @keyframes Profile-img-spin{
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
     .banner-img {
         @include flexbox(row, center, center);
         background-color: rgb(73, 173, 140);
@@ -23,21 +38,6 @@
         height: 350px;
         margin: 0px 40px;
         border: 3px double rgb(9, 65, 47);
-
-        @media (prefers-reduced-motion: no-preference) {
-            .banner-img-inner {
-              animation: Profile-img-spin infinite 60s linear;
-            }
-          }
-
-        @keyframes Profile-img-spin{
-            from {
-              transform: rotate(0deg);
-            }
-            to {
-              transform: rotate(360deg);
-            }
-          }
 
         @media screen and (max-width: 768px) {
             width: 250px;
