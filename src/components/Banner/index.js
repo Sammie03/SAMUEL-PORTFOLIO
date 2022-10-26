@@ -19,7 +19,7 @@ export default class Banner extends Component {
         const currentHour = currentDate.getHours()
         const daysOfWeek = ['Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat']
 
-        this.setState(prevState => {
+        this.setState((prevState) => {
             return {
                 ...prevState,
                 hour: currentHour,
