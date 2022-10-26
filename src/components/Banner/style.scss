@@ -101,6 +101,14 @@
             }
         }
 
+        [alt="github"], [alt="linkedin"], [alt="twitter"] {
+            transition: all .5s ease-in-out;
+
+            &:hover{
+                transform: scale(1.5); 
+            }
+        }
+
         .myname {
             background-image: linear-gradient(to right, rgb(76, 219, 174), rgb(78, 213, 170), rgb(70, 247, 191), rgb(5, 199, 137));
             background-clip: text;
