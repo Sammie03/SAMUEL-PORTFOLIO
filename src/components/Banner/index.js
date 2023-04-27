@@ -47,7 +47,7 @@ export default class Banner extends Component {
                     {' '}
                     <b>Good morning</b>{' '}
                     <span role="img" aria-label="coffee-cup">
-                        ☕
+                        ☕.
                     </span>
                 </span>
             )
